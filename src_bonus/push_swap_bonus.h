@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:41:26 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/13 17:37:08 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/14 19:05:07 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include <stdio.h>
 # include <unistd.h>
@@ -81,7 +81,7 @@ void			node_reverse_rotate(t_stack_node **stack);
 void			node_rotate(t_stack_node **stack);
 void			node_swap(t_stack_node **stack);
 
-char			*get_next_strjoin(char const *s1,
+char			*get_next_join(char const *s1,
 					char const *s2, int num_bytes);
 char			*ft_strchr(char *s, int c);
 char			*ft_read_and_stash(int fd, char	*stash);
@@ -89,9 +89,9 @@ char			*ft_line(char *stash);
 char			*ft_clean_stash(char	*stash);
 char			*get_next_line(int fd);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-int				check_argv( char *argv);
-void			do_rotate(t_stack_node **a, t_stack_node **b, char *argv);
-void			make_commands(t_stack_node **a, t_stack_node **b, char *argv);
+int				check_line( char *line);
+void			do_rotate(t_stack_node **a, t_stack_node **b, char *line);
+void			make_commands(t_stack_node **a, t_stack_node **b, char *line);
 void			is_ok_ko(t_stack_node **a, t_stack_node	**b);
 
 #endif
