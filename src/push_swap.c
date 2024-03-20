@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:18:00 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/14 18:54:12 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/19 19:16:31 by francfer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ void	sort_algorithm(t_stack_node **a, t_stack_node **b)
 	}
 }
 
+void patata()
+{
+	system("leaks push_swap");
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
@@ -35,5 +40,6 @@ int	main(int argc, char **argv)
 	a = parse(argc, argv);
 	sort_algorithm(&a, &b);
 	a = free_stack(a);
+	//atexit(patata);
 	return (0);
 }

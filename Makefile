@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+         #
+#    By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:41:39 by sarajime          #+#    #+#              #
-#    Updated: 2024/03/14 19:04:33 by sarajime         ###   ########.fr        #
+#    Updated: 2024/03/20 11:22:51 by francfer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-NAME_BONUS = checker_bonus
-FLAGS = -Wall -Werror -Wextra
+NAME_BONUS = checker
+FLAGS = -g -Wall -Werror -Wextra
 SRC_DIR = src
 SRC_DIR_BONUS = src_bonus
 
@@ -35,19 +35,19 @@ INCS_BONUS = -I push_swap_bonus.h
 all: $(NAME)
 
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
+	$(CC) $(FLAGS) -c $< -o $@ $(INCS)
 
 $(SRC_DIR_BONUS)/%.o: $(SRC_DIR_BONUS)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@ $(INCS_BONUS)
+	$(CC) $(FLAGS) -c $< -o $@ $(INCS_BONUS)
 	
 
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME) 
+	$(CC) $(FLAGS) $(OBJECTS) -o $(NAME) 
 
 bonus: $(NAME_BONUS)
 
 $(NAME_BONUS): $(OBJECTS_BONUS)
-	$(CC) $(CFLAGS) $(OBJECTS_BONUS) -o $(NAME_BONUS)
+	$(CC) $(FLAGS) $(OBJECTS_BONUS) -o $(NAME_BONUS)
 	
 clean:
 	rm -rf $(OBJECTS) $(OBJECTS_BONUS)

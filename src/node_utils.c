@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:02:52 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/06 19:10:55 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/19 17:55:10 by francfer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ t_stack_node	*ft_lstnew(int digit)
 
 t_stack_node	*cheapest_a(t_stack_node *stack)
 {
-	long			cheapest_value;
+	int				cheapest_value;
 	t_stack_node	*cheapest_node;
 
 	if (!stack)
 		return (NULL);
-	cheapest_value = LONG_MAX;
+	cheapest_value = INT_MAX;
 	cheapest_node = NULL;
 	while (stack)
 	{

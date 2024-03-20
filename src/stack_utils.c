@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 13:37:55 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/06 19:36:55 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/20 11:31:12 by francfer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	put_index(t_stack_node *stack)
 	while (stack)
 	{
 		stack->index = i;
-		if (i <= median)
+		if (i < median)
 			stack->above_median = 1;
 		else
 			stack->above_median = 0;

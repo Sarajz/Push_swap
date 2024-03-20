@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_reverse_rotate.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:43:26 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/05 18:11:28 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/19 19:36:19 by francfer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

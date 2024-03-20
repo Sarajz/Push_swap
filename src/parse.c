@@ -6,7 +6,7 @@
 /*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 16:24:15 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/06 19:38:26 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/19 17:19:15 by francfer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	atol_to_stack(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		digit = ft_atol(argv[i]);
-		if (digit > INT16_MAX || digit < INT16_MIN)
+		if (digit > INT_MAX || digit < INT_MIN)
 			a_error(a);
 		ft_lstadd_back(a, ft_lstnew((int)digit));
 		i++;

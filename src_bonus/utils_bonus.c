@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:46:14 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/14 19:01:57 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/19 19:55:28 by francfer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

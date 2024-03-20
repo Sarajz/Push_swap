@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_it.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:32:22 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/06 18:11:20 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/20 11:34:50 by francfer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 		pa(a, b);
 	}
 	tar_a = cheapest_a(*a);
+	put_index(*a);
 	while (*a != tar_a)
 	{
 		if (tar_a->above_median)
