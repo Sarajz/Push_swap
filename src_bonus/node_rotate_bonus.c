@@ -6,7 +6,7 @@
 /*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:44:44 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/13 18:04:13 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/20 18:19:33 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	node_rotate(t_stack_node **stack)
 	t_stack_node	*temp;
 	t_stack_node	*last;
 
-	if (!stack || !*stack)
+	if (!stack || !*stack || (*stack)->next == NULL)
 		return ;
 	temp = *stack;
 	last = ft_lstlast(*stack);

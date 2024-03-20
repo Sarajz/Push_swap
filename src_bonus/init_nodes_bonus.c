@@ -6,7 +6,7 @@
 /*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 10:40:54 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/13 18:04:06 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/20 16:59:19 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,13 +81,12 @@ void	set_target_b(t_stack_node *a, t_stack_node *b)
 static void	move_two_nodes(t_stack_node **a, t_stack_node **b,
 		t_stack_node *tar)
 {
-	if (*a != tar->target_node && *b != tar)
-	{
-		if (tar->target_node->above_median && tar->above_median)
-			rr(a, b);
-		else if (!tar->target_node->above_median && !tar->above_median)
-			rrr(a, b);
-	}
+	while ((tar->target_node->above_median && tar->above_median)
+		&& (*a != tar->target_node && *b != tar))
+		rr(a, b);
+	while ((!tar->target_node->above_median && !tar->above_median)
+		&& (ft_lstlast(*a) != tar->target_node && ft_lstlast(*b) != tar))
+		rrr(a, b);
 }
 
 void	move_node(t_stack_node **a, t_stack_node **b)
@@ -95,6 +94,7 @@ void	move_node(t_stack_node **a, t_stack_node **b)
 	t_stack_node	*tar;
 
 	tar = find_cheapest(*b);
+	move_two_nodes(a, b, tar);
 	while (*a != tar->target_node || *b != tar)
 	{
 		if (*a != tar->target_node)
@@ -111,6 +111,5 @@ void	move_node(t_stack_node **a, t_stack_node **b)
 			else
 				rrb(b);
 		}
-		move_two_nodes(a, b, tar);
 	}
 }

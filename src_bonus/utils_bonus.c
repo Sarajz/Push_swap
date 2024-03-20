@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:46:14 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/19 19:55:28 by francfer         ###   ########.fr       */
+/*   Updated: 2024/03/20 17:57:50 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ int	check_line(char *line)
 		return (0);
 	if (!(ft_strncmp(line, "pb\n", 3)))
 		return (0);
-	if (!(ft_strncmp(line, "rra\n", 3)))
+	if (!(ft_strncmp(line, "rra\n", 4)))
 		return (0);
-	if (!(ft_strncmp(line, "rrb\n", 3)))
+	if (!(ft_strncmp(line, "rrb\n", 4)))
 		return (0);
-	if (!(ft_strncmp(line, "rrr\n", 3)))
+	if (!(ft_strncmp(line, "rrr\n", 4)))
 		return (0);
 	return (1);
 }
@@ -71,22 +71,22 @@ void	make_commands(t_stack_node **a, t_stack_node **b, char *line)
 	do_rotate (a, b, line);
 	if (!(ft_strncmp(line, "sa\n", 3)))
 		node_swap(a);
-	if (!(ft_strncmp(line, "sb\n", 3)))
+	else if (!(ft_strncmp(line, "sb\n", 3)))
 		node_swap(b);
-	if (!(ft_strncmp(line, "ss\n", 3)))
+	else if (!(ft_strncmp(line, "ss\n", 3)))
 	{
 		node_swap(a);
 		node_swap(b);
 	}
-	if (!(ft_strncmp(line, "pa\n", 3)))
+	else if(!(ft_strncmp(line, "pa\n", 3)))
+		node_push(b, a);
+	else if(!(ft_strncmp(line, "pb\n", 3)))
 		node_push(a, b);
-	if (!(ft_strncmp(line, "pb\n", 3)))
-		node_push(a, b);
-	if (!(ft_strncmp(line, "rra\n", 3)))
+	else if(!(ft_strncmp(line, "rra\n", 4)))
 		node_reverse_rotate(a);
-	if (!(ft_strncmp(line, "rrb\n", 3)))
+	else if(!(ft_strncmp(line, "rrb\n", 4)))
 		node_reverse_rotate(b);
-	if (!(ft_strncmp(line, "rrr\n", 3)))
+	else if(!(ft_strncmp(line, "rrr\n", 4)))
 	{
 		node_reverse_rotate(a);
 		node_reverse_rotate(b);

@@ -3,43 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   init_nodes.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 10:40:54 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/20 14:21:36 by francfer         ###   ########.fr       */
+/*   Updated: 2024/03/20 16:41:33 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	print_stack_sin(t_stack_node *a, char *str)
-{
-	printf("STACK %s\n", str);
-	while(a)
-	{
-		printf("Index: %d |", a->index);
-		printf("Cost: %d |", a->push_cost);
-		printf("Above_Median: %d |", a->above_median);
-		printf("Digit: %d\n", a->digit);
-		a = a->next;
-	}
+// static void	print_stack_sin(t_stack_node *a, char *str)
+// {
+// 	printf("STACK %s\n", str);
+// 	while(a)
+// 	{
+// 		printf("Index: %d |", a->index);
+// 		printf("Cost: %d |", a->push_cost);
+// 		printf("Above_Median: %d |", a->above_median);
+// 		printf("Digit: %d\n", a->digit);
+// 		a = a->next;
+// 	}
 	
-}
+// }
 
-static void	print_stack(t_stack_node *a, char *str)
-{
-	printf("STACK %s\n", str);
-	while(a)
-	{
-		printf("Index: %d |", a->index);
-		printf("Cost: %d |", a->push_cost);
-		printf("Above_Median: %d |", a->above_median);
-		printf("Digit: %d |", a->digit);
-		printf("Target: %d\n", a->target_node->digit);
-		a = a->next;
-	}
+// static void	print_stack(t_stack_node *a, char *str)
+// {
+// 	printf("STACK %s\n", str);
+// 	while(a)
+// 	{
+// 		printf("Index: %d |", a->index);
+// 		printf("Cost: %d |", a->push_cost);
+// 		printf("Above_Median: %d |", a->above_median);
+// 		printf("Digit: %d |", a->digit);
+// 		printf("Target: %d\n", a->target_node->digit);
+// 		a = a->next;
+// 	}
 	
-}
+// }
 void	cost_analysis(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
@@ -109,14 +109,14 @@ void	set_target_b(t_stack_node *a, t_stack_node *b)
 static void	move_two_nodes(t_stack_node **a, t_stack_node **b,
 		t_stack_node *tar)
 {
-	while (*a != tar->target_node || *b != tar)
-	{
-		if (tar->target_node->above_median && tar->above_median)
-			rr(a, b);
-		else if (!tar->target_node->above_median && !tar->above_median)
-			rrr(a, b);
-	}
+	while ((tar->target_node->above_median && tar->above_median)
+		&& (*a != tar->target_node && *b != tar))
+		rr(a, b);
+	while ((!tar->target_node->above_median && !tar->above_median)
+		&& (ft_lstlast(*a) != tar->target_node && ft_lstlast(*b) != tar))
+		rrr(a, b);
 }
+
 
 void	move_node(t_stack_node **a, t_stack_node **b)
 {
@@ -126,8 +126,8 @@ void	move_node(t_stack_node **a, t_stack_node **b)
 	move_two_nodes(a, b, tar);
 	while (*a != tar->target_node || *b != tar)
 	{
-		print_stack(*b, "B");
-		print_stack_sin(*a, "A");
+		// print_stack(*b, "B");
+		// print_stack_sin(*a, "A");
 		if (*a != tar->target_node)
 		{
 			if (tar->target_node->above_median)

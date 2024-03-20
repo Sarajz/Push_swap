@@ -3,35 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   node_reverse_rotate_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:43:26 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/19 19:44:57 by francfer         ###   ########.fr       */
+/*   Updated: 2024/03/20 18:08:37 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-//void	node_reverse_rotate(t_stack_node **stack)
-//{
-//	t_stack_node	*temp;
-//	t_stack_node	*last;
+// void	node_reverse_rotate(t_stack_node **stack)
+// {
+// 	t_stack_node	*temp;
+// 	t_stack_node	*last;
 
-//	temp = *stack;
-//	last = ft_lstlast(*stack);
-//	while (temp)
-//	{
-//		if (temp->next->next == NULL)
-//		{
-//			temp->next = NULL;
-//			break ;
-//		}
-//		temp = temp->next;
-//	}
-//	last->next = *stack;
-//	*stack = last;
-//}
-void node_reverse_rotate(t_stack_node **head_ref)
+// 	temp = *stack;
+// 	last = ft_lstlast(*stack);
+// 	while (temp)
+// 	{
+// 		if (temp->next->next == NULL)
+// 		{
+// 			temp->next = NULL;
+// 			break ;
+// 		}
+// 		temp = temp->next;
+// 	}
+// 	last->next = *stack;
+// 	*stack = last;
+// }
+
+void    node_reverse_rotate(t_stack_node **head_ref)
 {
     // If the list is empty or has only one node, do nothing
     if (*head_ref == NULL || (*head_ref)->next == NULL)
@@ -41,7 +42,8 @@ void node_reverse_rotate(t_stack_node **head_ref)
     t_stack_node *last = *head_ref, *second_last = NULL;
     
     // Traverse the list until last points to the last node and second_last points to the node before the last
-    while (last->next != NULL) {
+    while (last->next != NULL)
+    {
         second_last = last;
         last = last->next;
     }
