@@ -6,7 +6,7 @@
 /*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 17:55:17 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/20 18:20:52 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/21 16:42:39 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,6 @@ void	commands(t_stack_node **a, t_stack_node **b)
 	is_ok_ko(a, b);
 }
 
-void leaks()
-{
-	system("leaks checker");
-}
-
 int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
@@ -48,5 +43,3 @@ int	main(int argc, char **argv)
 	commands(&a, &b);
 	return (0);
 }
-
-// "sa\nsb\nss\npa\npb\npa\npb\nsb\npa\nra\nrb\nrr\nrra\nrrb\nrrr"

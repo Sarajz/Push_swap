@@ -6,7 +6,7 @@
 /*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:46:14 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/20 17:57:50 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:13:13 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,15 +78,15 @@ void	make_commands(t_stack_node **a, t_stack_node **b, char *line)
 		node_swap(a);
 		node_swap(b);
 	}
-	else if(!(ft_strncmp(line, "pa\n", 3)))
+	else if (!(ft_strncmp(line, "pa\n", 3)))
 		node_push(b, a);
-	else if(!(ft_strncmp(line, "pb\n", 3)))
+	else if (!(ft_strncmp(line, "pb\n", 3)))
 		node_push(a, b);
-	else if(!(ft_strncmp(line, "rra\n", 4)))
+	else if (!(ft_strncmp(line, "rra\n", 4)))
 		node_reverse_rotate(a);
-	else if(!(ft_strncmp(line, "rrb\n", 4)))
+	else if (!(ft_strncmp(line, "rrb\n", 4)))
 		node_reverse_rotate(b);
-	else if(!(ft_strncmp(line, "rrr\n", 4)))
+	else if (!(ft_strncmp(line, "rrr\n", 4)))
 	{
 		node_reverse_rotate(a);
 		node_reverse_rotate(b);

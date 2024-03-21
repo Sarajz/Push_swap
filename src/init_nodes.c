@@ -6,40 +6,12 @@
 /*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 10:40:54 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/20 16:41:33 by sarajime         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:16:15 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// static void	print_stack_sin(t_stack_node *a, char *str)
-// {
-// 	printf("STACK %s\n", str);
-// 	while(a)
-// 	{
-// 		printf("Index: %d |", a->index);
-// 		printf("Cost: %d |", a->push_cost);
-// 		printf("Above_Median: %d |", a->above_median);
-// 		printf("Digit: %d\n", a->digit);
-// 		a = a->next;
-// 	}
-	
-// }
-
-// static void	print_stack(t_stack_node *a, char *str)
-// {
-// 	printf("STACK %s\n", str);
-// 	while(a)
-// 	{
-// 		printf("Index: %d |", a->index);
-// 		printf("Cost: %d |", a->push_cost);
-// 		printf("Above_Median: %d |", a->above_median);
-// 		printf("Digit: %d |", a->digit);
-// 		printf("Target: %d\n", a->target_node->digit);
-// 		a = a->next;
-// 	}
-	
-// }
 void	cost_analysis(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
@@ -117,7 +89,6 @@ static void	move_two_nodes(t_stack_node **a, t_stack_node **b,
 		rrr(a, b);
 }
 
-
 void	move_node(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*tar;
@@ -126,8 +97,6 @@ void	move_node(t_stack_node **a, t_stack_node **b)
 	move_two_nodes(a, b, tar);
 	while (*a != tar->target_node || *b != tar)
 	{
-		// print_stack(*b, "B");
-		// print_stack_sin(*a, "A");
 		if (*a != tar->target_node)
 		{
 			if (tar->target_node->above_median)
