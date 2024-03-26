@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 13:37:55 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/19 18:23:23 by francfer         ###   ########.fr       */
+/*   Updated: 2024/03/26 16:50:50 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 16:24:15 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/19 19:17:32 by francfer         ###   ########.fr       */
+/*   Updated: 2024/03/26 16:50:27 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

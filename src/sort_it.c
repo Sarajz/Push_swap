@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_it.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:32:22 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/20 11:34:50 by francfer         ###   ########.fr       */
+/*   Updated: 2024/03/26 16:48:23 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

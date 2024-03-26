@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:02:52 by sarajime          #+#    #+#             */
-/*   Updated: 2024/03/19 17:55:10 by francfer         ###   ########.fr       */
+/*   Updated: 2024/03/26 16:48:12 by sarajime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

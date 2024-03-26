@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: francfer <francfer@student.42malaga.com    +#+  +:+       +#+         #
+#    By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:41:39 by sarajime          #+#    #+#              #
-#    Updated: 2024/03/20 11:22:51 by francfer         ###   ########.fr        #
+#    Updated: 2024/03/26 16:47:29 by sarajime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
