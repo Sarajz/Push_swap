@@ -6,13 +6,14 @@
 #    By: sarajime <sarajime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:41:39 by sarajime          #+#    #+#              #
-#    Updated: 2024/03/26 16:47:29 by sarajime         ###   ########.fr        #
+#    Updated: 2024/03/26 17:02:23 by sarajime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 NAME_BONUS = checker
-FLAGS = -g -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra
+CC = gcc
 SRC_DIR = src
 SRC_DIR_BONUS = src_bonus
 
